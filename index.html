@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>b online | Agencia de diseño web y marketing digital</title>
+<meta name="description" content="Agencia de diseño web y marketing digital en Madrid y Barcelona. Webs profesionales a medida, SEO y automatización con IA. Precio cerrado desde el primer día.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bonline.es">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://bonline.es">
+<meta property="og:title"       content="b online | Agencia de diseño web y marketing digital">
+<meta property="og:description" content="Diseñamos webs profesionales que hacen crecer tu negocio. Madrid · Barcelona. Precio cerrado, sin letra pequeña.">
+<meta property="og:image"       content="https://bonline.es/assets/images/og.png">
+<meta property="og:locale"      content="es_ES">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="b online | Agencia de diseño web y marketing digital">
+<meta name="twitter:description" content="Diseñamos webs profesionales que hacen crecer tu negocio.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="shortcut icon"            href="assets/images/favicon.svg">
+<link rel="apple-touch-icon"         href="assets/images/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;--warm:#F5F3EE;--black:#111;--dark:#0F0F11;
+  --g700:#2a2a2a;--g600:#3d3d3d;--g500:#6b6b6b;--g400:#8a8a8a;--g300:#b0b0b0;--g200:#d6d6d6;--g100:#eee;
+  --grad:linear-gradient(135deg,#1D4ED8,#3B82F6,#5B6CF0,#38BDF8);
+  --grad-h:linear-gradient(135deg,#1a46c4,#3574e0,#5060d8,#30a8dd);
+  --grad-s:linear-gradient(135deg,rgba(29,78,216,.05),rgba(59,130,246,.03),rgba(56,189,248,.02));
+  --c1:#1D4ED8;--c2:#3B82F6;--c3:#5B6CF0;--c4:#38BDF8;
+  --f:'Outfit',sans-serif;
+  --max:1140px;
+  --px:clamp(1.5rem,5vw,4rem)
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:17px}
+body{font-family:var(--f);background:var(--bg);color:var(--black);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--c2);color:#fff}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem var(--px);display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.04)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--black)}
+.logo-s{position:relative;width:22px;height:34px;cursor:pointer}
+@keyframes dotBnc{0%,100%{transform:translateY(0)}25%{transform:translateY(-9px)}50%{transform:translateY(-1px)}75%{transform:translateY(-5px)}}
+.logo-dt.bounce{animation:dotBnc .55s cubic-bezier(.36,.07,.19,.97)}
+.logo-s:hover .logo-dt{animation:dotBnc .55s cubic-bezier(.36,.07,.19,.97)}
+.logo-st{position:absolute;top:0;left:0;width:6.5px;height:26px;background:var(--black);border-radius:3.25px}
+.logo-bw{position:absolute;top:6px;left:2.5px;width:19.5px;height:19.5px;background:var(--black);border-radius:50%}
+.logo-dt{position:absolute;bottom:0;left:0;width:5.5px;height:5.5px;border-radius:50%;background:var(--grad)}
+.logo-tx{display:flex;align-items:baseline;gap:5px}
+.logo-bb{font-weight:700;font-size:1.15rem;letter-spacing:-.03em}
+.logo-on{font-weight:300;font-size:1.15rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nl{display:flex;gap:1.8rem;align-items:center;list-style:none}
+.nl a{text-decoration:none;color:var(--g500);font-size:.88rem;font-weight:400;transition:color .3s}.nl a:hover{color:var(--black)}
+.nc{background:var(--grad)!important;color:#fff!important;padding:.5rem 1.2rem!important;border-radius:100px;font-weight:500!important;transition:all .3s!important;-webkit-text-fill-color:#fff!important}.nc:hover{opacity:.9!important;transform:translateY(-1px)}
+.ham{display:none;background:0;border:0;cursor:pointer;padding:.5rem}.ham span{display:block;width:20px;height:1.5px;background:var(--black);margin:4px 0;transition:all .3s}
+.ham.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+/* MOBILE MENU */
+.mob-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;padding:2rem}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:1.4rem;font-weight:600;color:var(--black);text-decoration:none;letter-spacing:-.02em;transition:color .2s}.mob-menu a:hover{color:var(--c2)}
+.mob-cta{background:var(--grad)!important;color:#fff!important;padding:.8rem 2rem;border-radius:100px;font-size:1.1rem!important;-webkit-text-fill-color:#fff!important}
+
+/* BUTTONS */
+.btn-grad{display:inline-flex;align-items:center;gap:.5rem;background:var(--grad);color:#fff;padding:.9rem 1.8rem;border-radius:100px;text-decoration:none;font-weight:500;font-size:.9rem;transition:all .3s;border:0;cursor:pointer;font-family:var(--f)}.btn-grad:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(29,78,216,.2);background:var(--grad-h)}.btn-grad svg{transition:transform .3s}.btn-grad:hover svg.btn-arr{transform:translateX(3px)}
+.btn-g{display:inline-flex;align-items:center;gap:.4rem;color:var(--g500);text-decoration:none;font-size:.85rem;font-weight:400;transition:color .3s;padding:.9rem .4rem}.btn-g:hover{color:var(--black)}
+.btn-o{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.3rem;border-radius:100px;text-decoration:none;font-size:.83rem;font-weight:400;border:1.5px solid var(--g200);color:var(--g500);transition:all .3s}.btn-o:hover{border-color:var(--c2);color:var(--c2)}
+.gl{height:3px;background:var(--grad);border:none;margin:0;opacity:.12}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 var(--px);gap:3rem;position:relative;overflow:hidden;max-width:var(--max);margin:0 auto}
+.hero-outer{position:relative}
+.hero-outer::after{content:'';position:absolute;top:-10%;right:-8%;width:550px;height:550px;background:radial-gradient(circle,rgba(59,130,246,.05) 0%,rgba(56,189,248,.02) 40%,transparent 70%);pointer-events:none;z-index:0}
+.hero-c{padding:7rem 0 4rem;max-width:540px;position:relative;z-index:1}
+.h-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--grad-s);font-size:.8rem;font-weight:500;padding:.38rem .8rem;border-radius:100px;margin-bottom:1.5rem;color:var(--c2)}
+.h-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--grad);animation:pu 2s infinite}
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(2.5rem,4.5vw,3.8rem);font-weight:700;line-height:1.08;letter-spacing:-.04em;margin-bottom:1.2rem}
+.hero h1 .ac{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.05rem;color:var(--g500);line-height:1.8;font-weight:300;margin-bottom:2rem;max-width:420px}
+.hero-a{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;margin-bottom:2rem}
+.hero-bar{display:flex;gap:.5rem;flex-wrap:wrap}
+.hero-bar a{display:inline-flex;align-items:center;gap:.35rem;padding:.5rem .9rem;border-radius:100px;font-size:.85rem;font-weight:400;text-decoration:none;border:1px solid var(--g100);color:var(--g500);transition:all .3s;background:var(--bg)}.hero-bar a:hover{border-color:var(--c2);color:var(--c2)}
+.hero-bar a svg{width:14px;height:14px;opacity:.45}
+.hero-v{position:relative;height:100vh;display:flex;align-items:center;justify-content:center}
+.hm{position:relative;width:100%;max-width:430px}
+.mbr{background:#fff;border-radius:14px;box-shadow:0 40px 80px rgba(0,0,0,.06),0 2px 12px rgba(0,0,0,.02);overflow:hidden;border:1px solid rgba(0,0,0,.04);transform:perspective(1000px) rotateY(-2deg) rotateX(1deg);transition:transform .6s cubic-bezier(.22,1,.36,1)}.mbr:hover{transform:perspective(1000px) rotateY(0) rotateX(0)}
+.mb-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#fafafa;border-bottom:1px solid rgba(0,0,0,.04)}
+.md{width:7px;height:7px;border-radius:50%}.md:nth-child(1){background:#FF5F57}.md:nth-child(2){background:#FFBD2E}.md:nth-child(3){background:#28C840}
+.mu{margin-left:10px;font-size:.64rem;color:var(--g400);background:#fff;padding:2px 8px;border-radius:4px;border:1px solid rgba(0,0,0,.03)}
+.mb-bd{padding:1.3rem;min-height:260px}
+.mbl{height:8px;border-radius:4px;margin-bottom:6px;background:var(--g100)}.mbl:nth-child(1){width:55%}.mbl:nth-child(2){width:38%;margin-bottom:11px}
+.mbs{height:4px;border-radius:2px;margin-bottom:4px;background:var(--g100);opacity:.5}.mbs:nth-child(3){width:72%}.mbs:nth-child(4){width:58%}.mbs:nth-child(5){width:65%}
+.m-btn{width:80px;height:22px;border-radius:100px;margin-top:11px;background:var(--grad)}
+.m-gr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:16px}
+.m-cd{background:var(--grad-s);border-radius:6px;height:55px}
+.fl{position:absolute;background:#fff;border-radius:10px;padding:.7rem .9rem;box-shadow:0 8px 28px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.03);z-index:2;animation:flt 6s ease-in-out infinite}.fl.f1{top:16%;right:-18px}.fl.f2{bottom:23%;left:-14px;animation-delay:-3s}
+.fl-l{font-size:.55rem;color:var(--g400);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.12rem}
+.fl-v{font-size:1.1rem;font-weight:700;letter-spacing:-.03em}
+.fl-v.up{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* MARQUEE */
+.marq{padding:1.2rem 0;overflow:hidden;border-top:1px solid rgba(0,0,0,.04);border-bottom:1px solid rgba(0,0,0,.04)}
+.marq-track{display:flex;gap:0;animation:marq 60s linear infinite;width:max-content}
+.marq-item{font-size:.85rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;padding:0 2.5rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+@keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.sec{padding:6rem 0}
+.sec-inner{max-width:var(--max);margin:0 auto;padding:0 var(--px)}
+.sec-w{background:var(--warm)}
+.sec-bl{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.sec-bl::before{content:'';position:absolute;top:-60px;right:-60px;width:350px;height:350px;background:radial-gradient(circle,rgba(59,130,246,.06) 0%,transparent 70%);pointer-events:none}
+.sec-bl::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(56,189,248,.04) 0%,transparent 70%);pointer-events:none}
+.sl{font-size:.75rem;text-transform:uppercase;letter-spacing:.18em;font-weight:600;margin-bottom:1rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stt{font-size:clamp(1.9rem,3vw,2.6rem);font-weight:700;line-height:1.12;letter-spacing:-.03em;max-width:560px;margin-bottom:.7rem}
+.ss{font-size:1rem;color:var(--g500);line-height:1.75;font-weight:300;max-width:500px;margin-bottom:2.5rem}
+.sec-bl .ss{color:rgba(255,255,255,.36)}
+
+/* PRICING */
+.pr-head{margin-bottom:2.5rem}
+.pr-tags{display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap}
+.pr-tag{font-size:.8rem;font-weight:500;padding:.35rem .9rem;border-radius:100px;background:var(--grad-s);color:var(--c1)}
+.pr-row{display:flex;gap:1.3rem;align-items:stretch}
+.pr{background:var(--bg);border:1px solid rgba(0,0,0,.05);border-radius:16px;padding:2.2rem 1.7rem;position:relative;transition:transform .4s,box-shadow .4s;display:flex;flex-direction:column;flex:1;min-width:0}
+.pr:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(0,0,0,.04)}
+.pr.pop{border:2px solid var(--c1)}
+.pop-t{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;font-size:.57rem;text-transform:uppercase;letter-spacing:.1em;padding:.25rem .85rem;border-radius:100px;font-weight:600;white-space:nowrap}
+.pr-nm{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--g400);margin-bottom:.3rem;font-weight:500}
+.pr-p{font-size:2.5rem;font-weight:700;letter-spacing:-.04em;margin-bottom:.1rem}
+.pr-per{font-size:.82rem;color:var(--g400);margin-bottom:1.1rem}
+.pr-d{font-size:.9rem;color:var(--g500);line-height:1.6;margin-bottom:1.5rem;padding-bottom:1.1rem;border-bottom:1px solid rgba(0,0,0,.05)}
+.pr-li{list-style:none;margin-bottom:1.6rem;flex:1}
+.pr-li li{font-size:.88rem;color:var(--g600);padding:.3rem 0;padding-left:1.3rem;position:relative;line-height:1.55}
+.pr-li li::before{content:'';position:absolute;left:0;top:.45rem;width:7px;height:7px;border-radius:50%;background:var(--grad)}
+.pr-cta{display:block;text-align:center;padding:.85rem;background:var(--grad);color:#fff;text-decoration:none;font-size:.9rem;font-weight:500;border-radius:100px;transition:all .3s;cursor:pointer;font-family:var(--f);width:100%;border:0}.pr-cta:hover{box-shadow:0 8px 24px rgba(29,78,216,.2);transform:translateY(-1px)}
+.pr-cta-o{display:block;text-align:center;padding:.85rem;border:1.5px solid var(--c1);background:transparent;color:var(--c1);text-decoration:none;font-size:.9rem;font-weight:500;border-radius:100px;transition:all .3s;cursor:pointer;font-family:var(--f);width:100%}.pr-cta-o:hover{background:var(--c1);color:#fff}
+.pr-note{margin-top:1.5rem;font-size:.83rem;color:var(--g400)}
+
+/* SERVICES */
+.wg{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+.wb{padding:2.2rem;border-radius:14px;background:var(--bg);border:1px solid rgba(0,0,0,.04);transition:transform .3s,box-shadow .3s}.wb:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.04)}
+.wb-n{font-size:.72rem;font-weight:600;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.7rem;letter-spacing:.05em}
+.wb h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem;letter-spacing:-.01em}
+.wb p{font-size:.92rem;color:var(--g500);line-height:1.75;font-weight:300}
+.wb .tg{display:inline-block;margin-top:.8rem;font-size:.75rem;font-weight:500;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* PROCESS */
+.proc-r{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.pc{position:relative;z-index:1}
+.pc-n{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;margin-bottom:1rem;color:#fff;background:var(--grad)}
+.pc h4{font-size:.98rem;font-weight:600;margin-bottom:.3rem}
+.pc p{font-size:.85rem;color:rgba(255,255,255,.36);line-height:1.7;font-weight:300}
+
+/* TEAM */
+.team-txt{font-size:1rem;color:var(--g500);line-height:1.8;font-weight:300;max-width:500px;margin-bottom:2.5rem}
+.team-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.tm{padding:1.8rem 1.5rem;background:var(--bg);border:1px solid rgba(0,0,0,.04);border-radius:14px;transition:transform .3s,box-shadow .3s}.tm:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.04)}
+.tm-init{width:44px;height:44px;border-radius:50%;margin-bottom:.8rem;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;color:#fff}
+.tm h4{font-size:.92rem;font-weight:600;margin-bottom:.1rem}
+.tm .role{font-size:.72rem;color:var(--c2);font-weight:500;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem}
+.tm .bio{font-size:.83rem;color:var(--g500);line-height:1.65;font-weight:300}
+
+/* CASES */
+.cases-wrap{max-width:var(--max);margin:0 auto;padding:0 var(--px)}
+.cases-g{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden}
+.case{padding:3rem;display:flex;flex-direction:column;justify-content:flex-end;min-height:260px;text-decoration:none;transition:all .3s;position:relative;overflow:hidden}
+.case::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:var(--grad);opacity:0;transition:opacity .3s;pointer-events:none}.case:hover::after{opacity:.04}
+.case-dk{background:var(--dark);color:#fff}.case-lt{background:var(--warm);color:var(--black)}
+.case-type{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.3rem;font-weight:500;opacity:.38}
+.case-name{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.2rem}
+.case-what{font-size:.9rem;font-weight:300;opacity:.5;line-height:1.55}
+.case-url{font-size:.78rem;margin-top:.8rem;font-weight:400;opacity:.28;display:inline-flex;align-items:center;gap:.3rem}.case-url::after{content:'→';opacity:.5}
+
+/* CONTACT FORM */
+.contact-sec{padding:6rem 0}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;max-width:var(--max);margin:0 auto;padding:0 var(--px)}
+.contact-intro .stt{max-width:100%}
+.contact-links{display:flex;flex-direction:column;gap:.7rem;margin-top:1.5rem}
+.contact-link{display:inline-flex;align-items:center;gap:.6rem;font-size:.92rem;color:var(--g500);text-decoration:none;transition:color .2s}.contact-link:hover{color:var(--c2)}
+.contact-link svg{flex-shrink:0;opacity:.5}
+.contact-form{display:flex;flex-direction:column;gap:1.1rem}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cf-field{display:flex;flex-direction:column;gap:.4rem}
+.cf-field label{font-size:.82rem;font-weight:500;color:var(--g500);letter-spacing:.02em}
+.req{color:var(--c2)}
+.cf-field input,.cf-field select,.cf-field textarea{width:100%;padding:.8rem 1rem;border:1.5px solid var(--g200);border-radius:10px;font-family:var(--f);font-size:.95rem;color:var(--black);background:#fff;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none}
+.cf-field input:focus,.cf-field select:focus,.cf-field textarea:focus{border-color:var(--c2);box-shadow:0 0 0 3px rgba(59,130,246,.08)}
+.cf-field textarea{resize:vertical;min-height:120px;line-height:1.65}
+.cf-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238a8a8a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;cursor:pointer}
+.form-btn{width:100%;justify-content:center;padding:1rem;font-size:.95rem}
+.spin{animation:spinning .7s linear infinite;display:inline-block}
+@keyframes spinning{to{transform:rotate(360deg)}}
+.form-msg{font-size:.9rem;padding:.8rem 1rem;border-radius:8px;display:none}
+.form-msg.ok{display:block;background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
+.form-msg.err{display:block;background:#fef2f2;color:#991b1b;border:1px solid #fecaca}
+.form-privacy{font-size:.75rem;color:var(--g400);text-align:center}.form-privacy a{color:var(--c2);text-decoration:none}
+
+/* FOOTER */
+footer{background:var(--dark);color:#fff;padding:4rem 0 1.5rem}
+.footer-inner{max-width:var(--max);margin:0 auto;padding:0 var(--px)}
+.ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.ft-d{font-size:.88rem;color:rgba(255,255,255,.22);line-height:1.75;margin-top:.7rem;max-width:260px}
+.ftc h5{font-size:.68rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.16);margin-bottom:.8rem;font-weight:500}
+.ftc a{display:block;color:rgba(255,255,255,.4);text-decoration:none;font-size:.88rem;padding:.25rem 0;transition:color .3s}.ftc a:hover{color:#fff}
+.ftb{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.04);font-size:.75rem;color:rgba(255,255,255,.14);flex-wrap:wrap;gap:.8rem}
+.ftl a{color:rgba(255,255,255,.14);text-decoration:none;margin-left:1.5rem;transition:color .3s}.ftl a:hover{color:rgba(255,255,255,.4)}
+.ft-logo .logo-st{background:#fff}.ft-logo .logo-bw{background:#fff}.ft-logo .logo-bb{color:#fff}.ft-logo .logo-on{-webkit-text-fill-color:rgba(255,255,255,.25)}
+
+/* CHATBOT */
+#chatbot{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200}
+.chat-btn{width:52px;height:52px;border-radius:50%;background:var(--grad);border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 28px rgba(29,78,216,.3);transition:transform .3s,box-shadow .3s;position:relative}
+.chat-btn:hover{transform:scale(1.08);box-shadow:0 12px 36px rgba(29,78,216,.4)}
+.chat-icon-close{display:none}
+.chat-btn.open .chat-icon-open{display:none}
+.chat-btn.open .chat-icon-close{display:block}
+.chat-badge{position:absolute;top:-4px;right:-4px;width:18px;height:18px;background:#ef4444;border-radius:50%;font-size:.58rem;font-weight:700;color:#fff;display:flex;align-items:center;justify-content:center;border:2px solid #fff;animation:bpulse 2s infinite}
+@keyframes bpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.chat-badge.hidden{display:none}
+.chat-window{position:absolute;bottom:64px;right:0;width:320px;background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.12),0 4px 16px rgba(0,0,0,.06);overflow:hidden;border:1px solid rgba(0,0,0,.04);display:none;flex-direction:column;max-height:480px}
+.chat-window.open{display:flex}
+.chat-head{display:flex;align-items:center;gap:.7rem;padding:1rem 1.1rem;background:var(--grad);color:#fff}
+.chat-head .logo-s.sm{width:18px;height:28px;flex-shrink:0}
+.chat-head .logo-s.sm .logo-st{background:#fff}
+.chat-head .logo-s.sm .logo-bw{background:#fff}
+.chat-head .logo-s.sm .logo-dt{background:rgba(255,255,255,.5)}
+.chat-name{font-size:.85rem;font-weight:600;line-height:1}
+.chat-status{font-size:.65rem;opacity:.75;margin-top:.1rem;display:flex;align-items:center;gap:.3rem}
+.chat-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:pu 2s infinite}
+.chat-x{margin-left:auto;background:0;border:0;color:#fff;cursor:pointer;opacity:.7;padding:.2rem;display:flex;align-items:center;transition:opacity .2s}.chat-x:hover{opacity:1}
+.chat-msgs{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.6rem;scroll-behavior:smooth}
+.chat-msgs::-webkit-scrollbar{width:4px}.chat-msgs::-webkit-scrollbar-track{background:transparent}.chat-msgs::-webkit-scrollbar-thumb{background:var(--g200);border-radius:2px}
+.msg{max-width:82%;padding:.6rem .85rem;border-radius:12px;font-size:.8rem;line-height:1.55;word-break:break-word;white-space:pre-wrap}
+.msg.bot{background:var(--g100);color:var(--black);align-self:flex-start;border-bottom-left-radius:3px}
+.msg.usr{background:var(--grad);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
+.msg-typing{display:flex;gap:4px;padding:.7rem .9rem;align-items:center}
+.msg-typing span{width:6px;height:6px;border-radius:50%;background:var(--g400);animation:ty .9s infinite}.msg-typing span:nth-child(2){animation-delay:.15s}.msg-typing span:nth-child(3){animation-delay:.3s}
+@keyframes ty{0%,80%,100%{transform:scale(1);opacity:.4}40%{transform:scale(1.2);opacity:1}}
+.chat-inp{display:flex;gap:.5rem;padding:.8rem;border-top:1px solid var(--g100)}
+.chat-inp input{flex:1;border:1.5px solid var(--g200);border-radius:8px;padding:.5rem .8rem;font-family:var(--f);font-size:.82rem;outline:none;transition:border-color .2s}.chat-inp input:focus{border-color:var(--c2)}
+#chatSend{width:34px;height:34px;border-radius:8px;background:var(--grad);border:0;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .2s}.#chatSend:hover{opacity:.85}
+.chat-foot{padding:.5rem 1rem .8rem;border-top:1px solid var(--g100)}
+.chat-foot a{font-size:.68rem;color:var(--g400);text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}.chat-foot a:hover{color:var(--black)}
+
+/* ANIMATIONS */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* RESPONSIVE */
+@media(max-width:1140px){
+  .hero{max-width:100%}
+}
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr}.hero-v{display:none}
+  .wg{grid-template-columns:1fr}
+  .cases-g{grid-template-columns:1fr}
+  .pr-row{flex-direction:column;max-width:420px}
+  .ftg{grid-template-columns:1fr 1fr}
+  .team-g{grid-template-columns:1fr 1fr}
+  .contact-wrap{grid-template-columns:1fr;gap:3rem}
+  .proc-r{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  nav{padding:.85rem 1.25rem}.nl{display:none}.ham{display:block}
+  .sec{padding:4rem 0}
+  .sec-inner{padding:0 1.25rem}
+  .hero{padding:0 1.25rem;grid-template-columns:1fr}.hero-c{padding:5.5rem 0 3rem}
+  .hero h1{font-size:clamp(2rem,8vw,2.8rem)}
+  .hero-sub{font-size:.95rem}
+  .proc-r{grid-template-columns:1fr 1fr;gap:1.2rem}
+  .team-g{grid-template-columns:1fr}
+  .pr-row{max-width:100%}
+  .contact-sec{padding:4rem 0}
+  .contact-wrap{padding:0 1.25rem;gap:2.5rem}
+  footer{padding:3rem 0 1.2rem}
+  .footer-inner{padding:0 1.25rem}
+  .ftg{grid-template-columns:1fr;gap:1.5rem}
+  .hero-a{flex-direction:column;align-items:stretch;text-align:center}
+  .btn-g,.btn-o{justify-content:center}
+  .cases-wrap{padding:0 1.25rem}
+  .hero-bar{justify-content:center}
+  .cf-row{grid-template-columns:1fr}
+  .chat-window{width:calc(100vw - 2rem);right:-.5rem}
+  .stt{font-size:clamp(1.6rem,6vw,2rem)}
+}
+@media(max-width:480px){
+  .proc-r{grid-template-columns:1fr}
+  .team-g{grid-template-columns:1fr}
+  .hero-bar a{font-size:.8rem}
+}
+
+/* LEGAL PAGES */
+.legal-page{padding:8rem 0 6rem}
+.legal-inner{max-width:760px;margin:0 auto;padding:0 var(--px)}
+.legal-inner h1{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;letter-spacing:-.03em;margin-bottom:.4rem}
+.legal-date{font-size:.82rem;color:var(--g400);margin-bottom:3rem}
+.legal-inner h2{font-size:1.05rem;font-weight:600;margin:2rem 0 .6rem;letter-spacing:-.01em}
+.legal-inner p{font-size:.95rem;color:var(--g600);line-height:1.8;margin-bottom:.9rem}
+.legal-inner ul{padding-left:1.4rem;margin-bottom:.9rem}
+.legal-inner ul li{font-size:.95rem;color:var(--g600);line-height:1.8;margin-bottom:.25rem}
+.legal-inner a{color:var(--c2);text-decoration:none}.legal-inner a:hover{text-decoration:underline}
+.cookie-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
+.cookie-table th,.cookie-table td{padding:.65rem .9rem;border:1px solid var(--g200);text-align:left;vertical-align:top}
+.cookie-table th{background:var(--warm);font-weight:600;color:var(--g700)}
+.cookie-table td{color:var(--g600)}
+
+</style>
+</head>
+<body>
+<nav id="mainNav">
+  <a href="#" class="logo" aria-label="b online">
+    <div class="logo-s" id="logoB" title="Haz clic para que salte">
+      <div class="logo-st"></div><div class="logo-bw"></div><div class="logo-dt"></div>
+    </div>
+    <div class="logo-tx"><span class="logo-bb">b</span> <span class="logo-on">online</span></div>
+  </a>
+  <ul class="nl" id="mainMenu">
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#contacto" class="nc">Impulsa tu negocio</a></li>
+  </ul>
+  <button class="ham" id="hamBtn" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mob-menu" id="mobMenu" aria-hidden="true">
+  <a href="#precios">Precios</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#equipo">Equipo</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#contacto" class="mob-cta">Impulsa tu negocio</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-c">
+    <div class="h-tag rv"><span class="dot"></span> Aceptando nuevos proyectos</div>
+    <h1 class="rv d1">Lleva tu negocio al <span class="ac">siguiente nivel</span></h1>
+    <p class="hero-sub rv d2">Somos tu agencia digital. Diseñamos y desarrollamos webs profesionales que transmiten confianza, captan clientes y hacen crecer tu marca.</p>
+    <div class="hero-a rv d3">
+      <a href="#contacto" class="btn-grad">Impulsa tu negocio <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#proyectos" class="btn-g">Ver proyectos ↓</a>
+    </div>
+    <div class="hero-bar rv d3">
+      <a href="mailto:hola@bonline.es"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>hola@bonline.es</a>
+      <a href="https://wa.me/34600000000" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WhatsApp</a>
+      <a href="mailto:hola@bonline.es?subject=Reservar%20videollamada%2015%20min"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9.75a2.25 2.25 0 002.25-2.25v-9A2.25 2.25 0 0014.25 5.25H4.5A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/></svg>Videollamada 15 min</a>
+    </div>
+  </div>
+  <div class="hero-v">
+    <div class="hm">
+      <div class="fl f1"><div class="fl-l">Visitas / mes</div><div class="fl-v up">+340%</div></div>
+      <div class="fl f2"><div class="fl-l">Velocidad</div><div class="fl-v" style="color:#22c55e">98/100</div></div>
+      <div class="mbr">
+        <div class="mb-bar"><span class="md"></span><span class="md"></span><span class="md"></span><span class="mu">tunegocio.es</span></div>
+        <div class="mb-bd"><div class="mbl"></div><div class="mbl"></div><div class="mbs"></div><div class="mbs"></div><div class="mbs"></div><div class="m-btn"></div><div class="m-gr"><div class="m-cd"></div><div class="m-cd"></div><div class="m-cd"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq" aria-hidden="true">
+  <div class="marq-track">
+    <span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span><span class="marq-item">be digital — be online</span>
+  </div>
+</div>
+
+<!-- PRECIOS -->
+<section class="sec" id="precios">
+<div class="sec-inner">
+<div class="pr-head rv">
+    <div class="sl">Precios</div>
+    <h2 class="stt">Precios transparentes</h2>
+    <p class="ss" style="margin-bottom:0">Presupuesto cerrado y detallado desde el primer día.</p>
+    <div class="pr-tags"><span class="pr-tag">Económico</span><span class="pr-tag">Competitivo</span><span class="pr-tag">Precio cerrado</span><span class="pr-tag">Sin letra pequeña</span></div>
+  </div>
+  <div class="pr-row">
+    <div class="pr rv">
+      <div class="pr-nm">Digital</div><div class="pr-p">990€</div><div class="pr-per">Pago único + IVA</div>
+      <p class="pr-d">La web profesional que tu negocio necesita para dar una imagen sólida y captar la atención de tus clientes.</p>
+      <ul class="pr-li"><li>Diseño personalizado y a medida</li><li>Hasta 8 secciones</li><li>Adaptada a móvil, tablet y escritorio</li><li>Optimizada para buscadores</li><li>Formulario de contacto integrado</li><li>Tu web es tuya, sin dependencias</li></ul>
+      <a href="#contacto" class="pr-cta-o">Empezar mi proyecto</a>
+    </div>
+    <div class="pr pop rv d1">
+      <span class="pop-t">El más elegido</span>
+      <div class="pr-nm">Premium</div><div class="pr-p">1.990€</div><div class="pr-per">Pago único + IVA</div>
+      <p class="pr-d">Para negocios que quieren ir un paso más allá: más secciones, más estrategia, más resultados.</p>
+      <ul class="pr-li"><li>Todo lo del plan Digital</li><li>Hasta 10 secciones a medida</li><li>Estrategia de contenidos y posicionamiento</li><li>Integración con redes sociales</li><li>Google Maps y ficha de negocio</li><li>Soporte post-lanzamiento incluido</li></ul>
+      <a href="#contacto" class="pr-cta">Empezar mi proyecto</a>
+    </div>
+    <div class="pr rv d2">
+      <div class="pr-nm">A medida</div><div class="pr-p">Tu proyecto</div><div class="pr-per">Presupuesto personalizado</div>
+      <p class="pr-d">Tienda online, sistema de reservas, multiidioma o cualquier funcionalidad que tu negocio necesite.</p>
+      <ul class="pr-li"><li>Diseño 100% a medida</li><li>E-commerce con pasarela de pago</li><li>Reservas y área privada</li><li>Conexión con CRM y herramientas</li><li>Multiidioma</li><li>Copywriting profesional</li></ul>
+      <a href="#contacto" class="pr-cta-o">Hablemos de tu proyecto</a>
+    </div>
+  </div>
+  <p class="pr-note rv">Todos los precios + IVA. Precio cerrado desde la primera reunión. Transparencia total en cada fase del proyecto.</p>
+</div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="sec sec-w" id="servicios">
+<div class="sec-inner">
+<div class="sl rv">Servicios</div><h2 class="stt rv">Digitalizamos tu negocio</h2><p class="ss rv">Cada servicio está pensado para resolver un problema concreto y generar resultados reales.</p>
+  <div class="wg">
+    <div class="wb rv"><div class="wb-n">01</div><h3>Presencia profesional online</h3><p>Webs corporativas que comunican el valor real de tu negocio. Diseño a medida pensado para generar confianza y convertir visitas en contactos.</p><span class="tg">Webs corporativas · Landing pages · Rediseños</span></div>
+    <div class="wb rv d1"><div class="wb-n">02</div><h3>Venta y captación online</h3><p>Tiendas online funcionales, sistemas de reservas y formularios inteligentes. Todo lo necesario para que tu web genere negocio de forma activa.</p><span class="tg">E-commerce · Reservas · Formularios</span></div>
+    <div class="wb rv d2"><div class="wb-n">03</div><h3>Posicionamiento y visibilidad</h3><p>Trabajamos para que tu web aparezca donde tus clientes buscan. Estrategia de contenidos, SEO técnico y presencia en Google optimizada.</p><span class="tg">SEO · Contenidos · Google Business</span></div>
+    <div class="wb rv d3"><div class="wb-n">04</div><h3>IA y automatización</h3><p>Chatbots inteligentes, flujos automatizados y conexiones entre plataformas. Hacemos que la tecnología trabaje por tu negocio las 24 horas.</p><span class="tg">Chatbots · CRM · WhatsApp Business · Email</span></div>
+  </div>
+</div>
+</section>
+
+<!-- PROCESO -->
+<section class="sec sec-bl">
+<div class="sec-inner">
+<div class="sl rv">Proceso</div><h2 class="stt rv" style="color:#fff">De la idea a tu web, paso a paso</h2><p class="ss rv">Un proceso claro y transparente en cada fase.</p>
+  <div class="proc-r rv">
+    <div class="pc"><div class="pc-n">01</div><h4>Nos conocemos</h4><p>Hablamos de tu negocio, tus objetivos y lo que necesitas. Sin compromiso.</p></div>
+    <div class="pc"><div class="pc-n">02</div><h4>Diseñamos</h4><p>Creamos una propuesta visual a medida. Tú validas, nosotros ajustamos hasta que encaje.</p></div>
+    <div class="pc"><div class="pc-n">03</div><h4>Desarrollamos</h4><p>Construimos tu web con código limpio, rápida y preparada para posicionar en Google.</p></div>
+    <div class="pc"><div class="pc-n">04</div><h4>Lanzamos</h4><p>Publicamos, configuramos todo lo necesario y te acompañamos en las primeras semanas.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- EQUIPO -->
+<section class="sec" id="equipo">
+<div class="sec-inner">
+<div class="sl rv">Equipo</div><h2 class="stt rv">Las personas detrás de b online</h2>
+  <p class="team-txt rv">Trabajamos de forma directa, sin intermediarios. Cada persona del equipo está involucrada en los proyectos desde el primer día.</p>
+  <div class="team-g rv">
+    <div class="tm"><div class="tm-init">ST</div><h4>Sergio de la Torre</h4><div class="role">Director de estrategia</div><div class="bio">Define la hoja de ruta de cada proyecto. Analiza el negocio, el mercado y la competencia para tomar las decisiones correctas desde el inicio.</div></div>
+    <div class="tm"><div class="tm-init">RA</div><h4>Raquel Ayllón</h4><div class="role">Directora de marketing</div><div class="bio">Diseña la estrategia de captación y comunicación digital. Responsable de que cada web atraiga al público adecuado.</div></div>
+    <div class="tm"><div class="tm-init">JG</div><h4>Jose García</h4><div class="role">Lead developer</div><div class="bio">Responsable del desarrollo técnico. Construye cada web con código limpio, seguro y optimizado para rendimiento y escalabilidad.</div></div>
+    <div class="tm"><div class="tm-init">LP</div><h4>Laura Pérez</h4><div class="role">Content strategist</div><div class="bio">Desarrolla la estrategia editorial y el copywriting de cada proyecto. Contenido pensado para posicionar y para convencer.</div></div>
+    <div class="tm"><div class="tm-init">RA</div><h4>Rosa María Ahumada</h4><div class="role">IA &amp; automation specialist</div><div class="bio">Diseña e implementa chatbots, automatizaciones y conexiones inteligentes entre plataformas para optimizar procesos.</div></div>
+    <div class="tm"><div class="tm-init">MR</div><h4>María Ruiz</h4><div class="role">UX/UI designer</div><div class="bio">Responsable del diseño de interfaces y experiencia de usuario. Cada pantalla pensada para ser intuitiva, funcional y visualmente impecable.</div></div>
+  </div>
+</div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="sec sec-w" id="proyectos" style="padding-bottom:2rem">
+<div class="sec-inner">
+<div class="sl rv">Proyectos</div><h2 class="stt rv">Negocios que ya dieron el paso</h2><p class="ss rv">Cada proyecto que entregamos tiene detrás un negocio real que decidió apostar por su presencia digital.</p>
+</div>
+</section>
+<div class="cases-wrap"><div class="cases-g rv">
+  <a href="https://aibymaia.com" target="_blank" class="case case-dk"><div class="case-type">Agencia de marketing</div><div class="case-name">MAIA</div><div class="case-what">Web corporativa para agencia de growth marketing. Diseño premium con animaciones y sistema de captación integrado.</div><div class="case-url">aibymaia.com</div></a>
+  <a href="https://musanailspain.com" target="_blank" class="case case-lt"><div class="case-type">E-commerce · Belleza profesional</div><div class="case-name">Mūsa Nails Spain</div><div class="case-what">Tienda online de productos profesionales para uñas. Catálogo completo, pasarela de pago y centro de formación.</div><div class="case-url">musanailspain.com</div></a>
+</div></div>
+
+<!-- CONTACTO -->
+<section class="sec contact-sec" id="contacto">
+<div class="sec-inner">
+<div class="contact-wrap">
+    <div class="contact-intro rv">
+      <div class="sl">Contacto</div>
+      <h2 class="stt">¿Preparado para dar el <span class="ac">siguiente paso</span>?</h2>
+      <p class="ss" style="margin-bottom:1.5rem">Cuéntanos tu proyecto y te respondemos en menos de 24 horas. Sin compromiso.</p>
+      <div class="contact-links">
+        <a href="mailto:hola@bonline.es" class="contact-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>hola@bonline.es</a>
+        <a href="https://wa.me/34600000000" target="_blank" class="contact-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WhatsApp</a>
+        <a href="mailto:hola@bonline.es?subject=Reservar%20videollamada%2015%20min" class="contact-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9.75a2.25 2.25 0 002.25-2.25v-9A2.25 2.25 0 0014.25 5.25H4.5A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/></svg>Videollamada 15 min</a>
+      </div>
+    </div>
+    <form id="bonlineForm" class="contact-form rv d1" novalidate>
+      <div class="cf-row">
+        <div class="cf-field"><label for="cf-nombre">Nombre <span class="req">*</span></label><input type="text" id="cf-nombre" name="nombre" placeholder="Tu nombre" required></div>
+        <div class="cf-field"><label for="cf-email">Email <span class="req">*</span></label><input type="email" id="cf-email" name="email" placeholder="tu@email.com" required></div>
+      </div>
+      <div class="cf-row">
+        <div class="cf-field"><label for="cf-tel">Teléfono</label><input type="tel" id="cf-tel" name="telefono" placeholder="+34 600 000 000"></div>
+        <div class="cf-field"><label for="cf-servicio">¿Qué necesitas?</label>
+          <select id="cf-servicio" name="servicio"><option value="">Selecciona...</option><option>Web corporativa</option><option>Tienda online</option><option>Rediseño de web existente</option><option>SEO y posicionamiento</option><option>IA y automatización</option><option>Otro / No lo sé aún</option></select>
+        </div>
+      </div>
+      <div class="cf-field"><label for="cf-mensaje">Cuéntanos tu proyecto</label><textarea id="cf-mensaje" name="mensaje" placeholder="¿Qué tipo de web necesitas? ¿Tienes web actualmente? ¿Cuándo te gustaría tenerla lista?" rows="4"></textarea></div>
+      <button type="submit" class="btn-grad form-btn" id="formSubmit">
+        <span class="btn-txt">Enviar mensaje</span>
+        <span class="btn-spin" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></span>
+        <svg class="btn-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <div class="form-msg" id="formMsg" role="alert"></div>
+      <p class="form-privacy">Al enviar aceptas nuestra <a href="#">política de privacidad</a>. (Demo: el formulario no envía emails en este preview)</p>
+    </form>
+  </div>
+</div>
+</section>
+
+<hr class="gl">
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+
+  <div class="ftg">
+    <div>
+      <a href="#" class="logo ft-logo"><div class="logo-s"><div class="logo-st"></div><div class="logo-bw"></div><div class="logo-dt"></div></div><div class="logo-tx"><span class="logo-bb">b</span> <span class="logo-on">online</span></div></a>
+      <p class="ft-d">Agencia digital. Diseñamos webs profesionales que hacen crecer tu negocio. Madrid · Barcelona.</p>
+    </div>
+    <div class="ftc"><h5>Servicios</h5><a href="#servicios">Web corporativa</a><a href="#servicios">Tienda online</a><a href="#servicios">Posicionamiento</a><a href="#servicios">IA y automatización</a></div>
+    <div class="ftc"><h5>Empresa</h5><a href="#equipo">Equipo</a><a href="#proyectos">Proyectos</a><a href="#precios">Precios</a></div>
+    <div class="ftc"><h5>Contacto</h5><a href="mailto:hola@bonline.es">hola@bonline.es</a><a href="https://wa.me/34600000000">WhatsApp</a><a href="mailto:hola@bonline.es?subject=Videollamada">Videollamada 15 min</a></div>
+  </div>
+  <div class="ftb"><span>© 2026 b online — be digital — be online</span><div class="ftl"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a></div></div>
+
+</div>
+</footer>
+
+<!-- CHATBOT -->
+<div id="chatbot">
+  <button id="chatBtn" class="chat-btn" aria-label="Abrir chat" aria-expanded="false">
+    <svg class="chat-icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <svg class="chat-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    <span class="chat-badge hidden" id="chatBadge">1</span>
+  </button>
+  <div class="chat-window" id="chatWindow" aria-hidden="true">
+    <div class="chat-head">
+      <div class="chat-av"><div class="logo-s sm"><div class="logo-st"></div><div class="logo-bw"></div><div class="logo-dt"></div></div></div>
+      <div><div class="chat-name">b online</div><div class="chat-status"><span class="chat-dot"></span> En línea</div></div>
+      <button class="chat-x" id="chatClose" aria-label="Cerrar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="chat-msgs" id="chatMsgs" role="log" aria-live="polite"></div>
+    <div class="chat-inp">
+      <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." autocomplete="off" maxlength="300">
+      <button id="chatSend"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg></button>
+    </div>
+    <div class="chat-foot"><a href="https://wa.me/34600000000" target="_blank">¿Prefieres WhatsApp?</a></div>
+  </div>
+</div>
+
+<script>
+/* ─────────────────────────────────────────────
+   CONFIGURACIÓN — edita solo estos 4 valores
+   ───────────────────────────────────────────── */
+window.SITE = {
+  email:      'hola@bonline.es',
+  phone:      '34600000000',
+  calendly:   'https://calendly.com/TU_USUARIO/15min',
+  formspree:  'https://formspree.io/f/TU_ID_FORMSPREE',
+};
+/* ─────────────────────────────────────────────
+   Inyectar valores en los enlaces de la página
+   ───────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href*="34600000000"]').forEach(a => {
+    a.href = a.href.replace('34600000000', SITE.phone);
+  });
+  document.querySelectorAll('a[href*="hola@bonline.es"]').forEach(a => {
+    a.href = a.href.replace('hola@bonline.es', SITE.email);
+    if (a.textContent.trim() === 'hola@bonline.es') a.textContent = SITE.email;
+  });
+  document.querySelectorAll('a[href*="calendly.com/TU_USUARIO"]').forEach(a => {
+    a.href = SITE.calendly;
+  });
+  document.querySelectorAll('a[href*="subject=Reservar"]').forEach(a => {
+    a.href = SITE.calendly;
+  });
+  document.querySelectorAll('a[href*="subject=Videollamada"]').forEach(a => {
+    a.href = SITE.calendly;
+  });
+  const yearEls = document.querySelectorAll('.copy-year');
+  yearEls.forEach(el => el.textContent = new Date().getFullYear());
+});
+</script>
+<script>
+(function () {
+  'use strict';
+
+  /* ── Scroll reveal ── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('vis'); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+
+  /* ── Smooth scroll anchors ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // close mobile menu if open
+      document.getElementById('mobMenu')?.classList.remove('open');
+      document.getElementById('hamBtn')?.classList.remove('open');
+      document.getElementById('hamBtn')?.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ── Hamburger menu ── */
+  const hamBtn = document.getElementById('hamBtn');
+  const mobMenu = document.getElementById('mobMenu');
+  hamBtn?.addEventListener('click', () => {
+    const isOpen = mobMenu.classList.toggle('open');
+    hamBtn.classList.toggle('open', isOpen);
+    hamBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  /* ── Nav shadow on scroll ── */
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav?.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* ── Auto-bounce only the dot every 2.5s ── */
+  const logoB   = document.getElementById('logoB');
+  const logoDot = document.querySelector('#logoB .logo-dt');
+  if (logoDot) {
+    const doBounce = () => {
+      logoDot.classList.remove('bounce');
+      void logoDot.offsetWidth;
+      logoDot.classList.add('bounce');
+    };
+    setInterval(doBounce, 2500);
+    logoB?.addEventListener('click', doBounce);
+    logoDot.addEventListener('animationend', () => logoDot.classList.remove('bounce'));
+  }
+
+  /* ── Contact form ── */
+  const form = document.getElementById('bonlineForm');
+  if (form) {
+    // inject nonce from WP
+    const nonceInput = document.getElementById('contactNonce');
+    if (nonceInput && window.bonlineData) nonceInput.value = bonlineData.nonce;
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn     = document.getElementById('formSubmit');
+      const msgEl   = document.getElementById('formMsg');
+      const btnTxt  = btn.querySelector('.btn-txt');
+      const btnSpin = btn.querySelector('.btn-spin');
+      const btnArr  = btn.querySelector('.btn-arr');
+
+      // loading state
+      btn.disabled = true;
+      btnTxt.textContent = 'Enviando...';
+      btnSpin.hidden = false;
+      btnArr.hidden  = true;
+      msgEl.className = 'form-msg';
+      msgEl.textContent = '';
+
+      try {
+        const data = new FormData(form);
+        const res  = await fetch(window.SITE.formspree, {
+          method: 'POST', body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        const json = await res.json();
+        if (res.ok) {
+          msgEl.className = 'form-msg ok';
+          msgEl.textContent = '¡Mensaje enviado! Te responderemos en menos de 24 horas.';
+          form.reset();
+        } else {
+          throw new Error(json.errors?.map(e=>e.message).join(', ') || 'Error al enviar.');
+        }
+      } catch (err) {
+        msgEl.className = 'form-msg err';
+        msgEl.textContent = err.message;
+      } finally {
+        btn.disabled = false;
+        btnTxt.textContent = 'Enviar mensaje';
+        btnSpin.hidden = true;
+        btnArr.hidden  = false;
+      }
+    });
+  }
+
+
+  /* ── Chatbot ── */
+  const KB = [
+    {
+      k: ['precio','cuánto','cuanto','coste','cuesta','presupuesto','tarifa','vale'],
+      r: 'Tenemos tres opciones de precio.\n\nEl plan Digital cuesta 990 euros más IVA. Incluye web profesional de hasta 8 secciones, diseño a medida, adaptada a móvil y optimizada para Google.\n\nEl plan Premium cuesta 1.990 euros más IVA y es el que más eligen nuestros clientes. Incluye todo lo anterior, más estrategia de contenidos, integración con redes sociales y soporte post-lanzamiento.\n\nPara proyectos más complejos como tiendas online, reservas o integraciones especiales, hacemos un presupuesto personalizado.\n\n¿Algún plan encaja con lo que necesitas?'
+    },
+    {
+      k: ['web','página','pagina','website','corporativa','landing'],
+      r: 'Diseñamos webs completamente a medida, sin plantillas genéricas. Cada proyecto empieza desde cero pensando en tu negocio, tu público y tus objetivos.\n\nTodas nuestras webs son rápidas, se ven bien en móvil y están optimizadas para aparecer en Google desde el primer día.\n\n¿Tienes ya alguna idea de lo que buscas?'
+    },
+    {
+      k: ['seo','google','posicionamiento','aparecer','búsqueda','busqueda','buscador'],
+      r: 'Trabajamos el SEO desde el principio del proyecto, no como un añadido final. Eso incluye la estructura técnica de la web, la velocidad de carga, los contenidos y la ficha de Google Business.\n\nEl plan Digital incluye SEO básico. El Premium incluye estrategia de contenidos completa.\n\n¿Tu web ya existe o la estamos construyendo desde cero?'
+    },
+    {
+      k: ['tienda','ecommerce','e-commerce','vender','venta','shop','productos','online'],
+      r: 'Montamos tiendas online completas con catálogo de productos, pasarela de pago (Stripe, PayPal o Redsys) y gestión de pedidos. Todo desde un panel de administración sencillo que tú puedes manejar sin conocimientos técnicos.\n\nEl precio depende del volumen del catálogo y las funcionalidades. ¿Me cuentas un poco más sobre tu proyecto?'
+    },
+    {
+      k: ['chatbot','bot','ia','inteligencia','automatización','automatizar','automatizacion','whatsapp business','whatsapp'],
+      r: 'Diseñamos e implementamos chatbots y automatizaciones que trabajan por tu negocio las 24 horas. Desde un asistente en la web como este, hasta flujos automáticos en WhatsApp Business o integraciones con tu CRM.\n\nEs algo que cada vez más negocios utilizan para responder consultas, cualificar leads y ahorrar tiempo. ¿Tienes algún proceso concreto en mente que te gustaría automatizar?'
+    },
+    {
+      k: ['tiempo','plazo','cuándo','cuando','semana','entrega','tardar','rápido','rapido','urgente'],
+      r: 'Los plazos habituales son dos o tres semanas para el plan Digital, tres o cinco semanas para el Premium, y según alcance para proyectos a medida.\n\nSiempre empezamos con una reunión inicial donde te damos un calendario detallado. Si tienes una fecha límite, cuéntanosla y vemos cómo organizarnos.'
+    },
+    {
+      k: ['proceso','cómo','como','funciona','pasos','paso','trabaja','trabajáis','trabajais'],
+      r: 'El proceso tiene cuatro fases. Primero nos conocemos en una llamada de 15 minutos sin compromiso. Después diseñamos una propuesta visual a medida que tú validas. Luego construimos la web con código limpio y optimizado. Y por último la publicamos, configuramos todo y te acompañamos las primeras semanas.\n\nEn todo momento sabes en qué punto estamos. ¿Te gustaría empezar con esa llamada?'
+    },
+    {
+      k: ['contacto','hablar','llamar','email','correo','reunión','reunion','videollamada','llamada','escribir'],
+      r: 'Puedes escribirnos a hola@bonline.es o por WhatsApp. También puedes reservar una videollamada gratuita de 15 minutos si prefieres hablarlo en persona.\n\nRespondemos en menos de 24 horas.'
+    },
+    {
+      k: ['quién','quien','equipo','somos','empresa','agencia','sois','trabajáis','trabajais'],
+      r: 'Somos b online, una agencia digital con sede en Madrid y Barcelona. Trabajamos de forma directa, sin intermediarios, lo que significa que la persona con quien hablas es la que trabaja en tu proyecto.\n\nEl equipo lo forman Sergio en estrategia, Raquel en marketing, Jose en desarrollo, Laura en contenidos, Rosa en IA y automatización, y María en diseño UX y UI.'
+    },
+    {
+      k: ['pago','factura','financiación','financiacion','plazos','forma de pago','cobráis','cobrar'],
+      r: 'El precio es cerrado desde el primer día, sin sorpresas ni letra pequeña. Se paga en dos partes: el 50% al inicio del proyecto y el 50% en la entrega. Emitimos factura con IVA incluido.'
+    },
+    {
+      k: ['hola','buenas','hey','buenos días','buenos dias','buenas tardes','buenas noches','ey'],
+      r: 'Hola, soy el asistente de b online. Puedo ayudarte con información sobre precios, servicios, plazos o el proceso de trabajo. ¿En qué te puedo orientar?'
+    },
+    {
+      k: ['gracias','genial','perfecto','ok','vale','bien','entendido'],
+      r: 'De nada. Si en algún momento quieres hablar directamente con el equipo, escríbenos a hola@bonline.es o por WhatsApp. Estamos disponibles de lunes a viernes.'
+    },
+  ];
+
+  function getBotResponse(msg) {
+    const m = msg.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    for (const item of KB) {
+      if (item.k.some(k => m.includes(k.normalize('NFD').replace(/[\u0300-\u036f]/g, '')))) {
+        return item.r;
+      }
+    }
+    return 'Buena pregunta 🤔 No tengo esa respuesta de forma automática, pero el equipo puede ayudarte en minutos.\n\n📧 hola@bonline.es\n📅 Videollamada gratuita\n\n¿Hay algo más en lo que pueda orientarte?';
+  }
+
+  const chatBtn    = document.getElementById('chatBtn');
+  const chatWindow = document.getElementById('chatWindow');
+  const chatClose  = document.getElementById('chatClose');
+  const chatMsgs   = document.getElementById('chatMsgs');
+  const chatInput  = document.getElementById('chatInput');
+  const chatSend   = document.getElementById('chatSend');
+  const chatBadge  = document.getElementById('chatBadge');
+
+  if (chatBtn && chatWindow) {
+    let opened = false;
+
+    function addMsg(text, type) {
+      const div = document.createElement('div');
+      div.className = 'msg ' + type;
+      div.textContent = text;
+      chatMsgs.appendChild(div);
+      chatMsgs.scrollTop = chatMsgs.scrollHeight;
+    }
+
+    function showTyping() {
+      const t = document.createElement('div');
+      t.className = 'msg bot msg-typing';
+      t.id = 'typing';
+      t.innerHTML = '<span></span><span></span><span></span>';
+      chatMsgs.appendChild(t);
+      chatMsgs.scrollTop = chatMsgs.scrollHeight;
+    }
+
+    function removeTyping() {
+      document.getElementById('typing')?.remove();
+    }
+
+    function sendMessage() {
+      const txt = chatInput.value.trim();
+      if (!txt) return;
+      addMsg(txt, 'usr');
+      chatInput.value = '';
+      showTyping();
+      setTimeout(() => {
+        removeTyping();
+        addMsg(getBotResponse(txt), 'bot');
+      }, 700 + Math.random() * 600);
+    }
+
+    function openChat() {
+      chatWindow.classList.add('open');
+      chatWindow.setAttribute('aria-hidden', 'false');
+      chatBtn.classList.add('open');
+      chatBtn.setAttribute('aria-expanded', 'true');
+      chatBadge.classList.add('hidden');
+      if (!opened) {
+        opened = true;
+        setTimeout(() => addMsg('¡Hola! 👋 Soy el asistente de b online.\n\n¿En qué puedo ayudarte? Pregúntame sobre precios, servicios, proceso de trabajo o lo que necesites.', 'bot'), 300);
+      }
+      setTimeout(() => chatInput.focus(), 350);
+    }
+
+    function closeChat() {
+      chatWindow.classList.remove('open');
+      chatWindow.setAttribute('aria-hidden', 'true');
+      chatBtn.classList.remove('open');
+      chatBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    chatBtn.addEventListener('click', () => {
+      chatWindow.classList.contains('open') ? closeChat() : openChat();
+    });
+    chatClose.addEventListener('click', closeChat);
+    chatSend.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+
+    // open after 8s if not interacted
+    setTimeout(() => {
+      if (!opened) chatBadge.classList.remove('hidden');
+    }, 8000);
+  }
+
+})();
+
+</script>
+</body>
+</html>

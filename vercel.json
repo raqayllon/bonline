@@ -1,10 +1,10 @@
 {
   "version": 2,
   "name": "bonline",
-  "builds": [
-    { "src": "preview.html", "use": "@vercel/static" }
-  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/preview.html" }
+    { "src": "/aviso-legal",  "dest": "/legal/aviso-legal.html" },
+    { "src": "/privacidad",   "dest": "/legal/privacidad.html" },
+    { "src": "/cookies",      "dest": "/legal/cookies.html" },
+    { "src": "/(.*)",         "dest": "/index.html" }
   ]
 }
