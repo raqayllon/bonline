@@ -2,9 +2,10 @@
   "version": 2,
   "name": "bonline",
   "routes": [
-    { "src": "/aviso-legal",  "dest": "/legal/aviso-legal.html" },
-    { "src": "/privacidad",   "dest": "/legal/privacidad.html" },
-    { "src": "/cookies",      "dest": "/legal/cookies.html" },
-    { "src": "/(.*)",         "dest": "/index.html" }
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/legal/(.*)",  "dest": "/legal/$1" },
+    { "src": "/aviso-legal", "dest": "/legal/aviso-legal.html" },
+    { "src": "/privacidad",  "dest": "/legal/privacidad.html" },
+    { "src": "/cookies",     "dest": "/legal/cookies.html" }
   ]
 }
