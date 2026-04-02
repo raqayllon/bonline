@@ -43,13 +43,24 @@ function bonline_scripts() {
 }
 add_action('wp_enqueue_scripts', 'bonline_scripts');
 
-/* ─── Favicon SVG ─── */
+/* ─── Favicon SVG (override WordPress default) ─── */
+remove_action('wp_head', 'wp_site_icon', 99);
 function bonline_favicon() {
     $favicon = get_template_directory_uri() . '/assets/images/favicon.svg';
     echo '<link rel="icon" type="image/svg+xml" href="' . esc_url($favicon) . '">' . "\n";
+    echo '<link rel="shortcut icon" href="' . esc_url($favicon) . '">' . "\n";
     echo '<link rel="apple-touch-icon" href="' . esc_url($favicon) . '">' . "\n";
 }
 add_action('wp_head', 'bonline_favicon', 1);
+
+/* ─── Page title filter ─── */
+function bonline_title($title) {
+    if (is_front_page()) {
+        return 'b online | Agencia de diseño web y marketing digital';
+    }
+    return $title;
+}
+add_filter('pre_get_document_title', 'bonline_title');
 
 /* ─── Customizer ─── */
 function bonline_customizer(WP_Customize_Manager $wp_customize) {

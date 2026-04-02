@@ -17,10 +17,10 @@ body{font-family:var(--f);background:var(--bg);color:var(--black);overflow-x:hid
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem var(--px);display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.04)}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--black)}
-.logo-s{position:relative;width:22px;height:34px;cursor:pointer;transition:transform .3s}
-.logo-s:hover{animation:bnc .5s}
-@keyframes bnc{0%{transform:translateY(0)}30%{transform:translateY(-8px)}50%{transform:translateY(0)}70%{transform:translateY(-4px)}100%{transform:translateY(0)}}
-.logo-s.bounce{animation:bnc .6s cubic-bezier(.36,.07,.19,.97)}
+.logo-s{position:relative;width:22px;height:34px;cursor:pointer}
+@keyframes dotBnc{0%,100%{transform:translateY(0)}25%{transform:translateY(-9px)}50%{transform:translateY(-1px)}75%{transform:translateY(-5px)}}
+.logo-dt.bounce{animation:dotBnc .55s cubic-bezier(.36,.07,.19,.97)}
+.logo-s:hover .logo-dt{animation:dotBnc .55s cubic-bezier(.36,.07,.19,.97)}
 .logo-st{position:absolute;top:0;left:0;width:6.5px;height:26px;background:var(--black);border-radius:3.25px}
 .logo-bw{position:absolute;top:6px;left:2.5px;width:19.5px;height:19.5px;background:var(--black);border-radius:50%}
 .logo-dt{position:absolute;bottom:0;left:0;width:5.5px;height:5.5px;border-radius:50%;background:var(--grad)}
@@ -270,3 +270,18 @@ footer{background:var(--dark);color:#fff;padding:4rem 0 1.5rem}
   .team-g{grid-template-columns:1fr}
   .hero-bar a{font-size:.8rem}
 }
+
+/* LEGAL PAGES */
+.legal-page{padding:8rem 0 6rem}
+.legal-inner{max-width:760px;margin:0 auto;padding:0 var(--px)}
+.legal-inner h1{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;letter-spacing:-.03em;margin-bottom:.4rem}
+.legal-date{font-size:.82rem;color:var(--g400);margin-bottom:3rem}
+.legal-inner h2{font-size:1.05rem;font-weight:600;margin:2rem 0 .6rem;letter-spacing:-.01em}
+.legal-inner p{font-size:.95rem;color:var(--g600);line-height:1.8;margin-bottom:.9rem}
+.legal-inner ul{padding-left:1.4rem;margin-bottom:.9rem}
+.legal-inner ul li{font-size:.95rem;color:var(--g600);line-height:1.8;margin-bottom:.25rem}
+.legal-inner a{color:var(--c2);text-decoration:none}.legal-inner a:hover{text-decoration:underline}
+.cookie-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
+.cookie-table th,.cookie-table td{padding:.65rem .9rem;border:1px solid var(--g200);text-align:left;vertical-align:top}
+.cookie-table th{background:var(--warm);font-weight:600;color:var(--g700)}
+.cookie-table td{color:var(--g600)}

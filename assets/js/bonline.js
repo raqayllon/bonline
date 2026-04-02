@@ -36,17 +36,18 @@
     nav?.classList.toggle('scrolled', window.scrollY > 20);
   }, { passive: true });
 
-  /* ── Auto-bounce logo "b" every 4 s ── */
-  const logoB = document.getElementById('logoB');
-  if (logoB) {
+  /* ── Auto-bounce only the dot every 2.5s ── */
+  const logoB   = document.getElementById('logoB');
+  const logoDot = document.querySelector('#logoB .logo-dt');
+  if (logoDot) {
     const doBounce = () => {
-      logoB.classList.remove('bounce');
-      void logoB.offsetWidth; // reflow
-      logoB.classList.add('bounce');
+      logoDot.classList.remove('bounce');
+      void logoDot.offsetWidth;
+      logoDot.classList.add('bounce');
     };
-    setInterval(doBounce, 4000);
-    logoB.addEventListener('click', doBounce);
-    logoB.addEventListener('animationend', () => logoB.classList.remove('bounce'));
+    setInterval(doBounce, 2500);
+    logoB?.addEventListener('click', doBounce);
+    logoDot.addEventListener('animationend', () => logoDot.classList.remove('bounce'));
   }
 
   /* ── Contact form ── */
@@ -106,51 +107,51 @@
   const KB = [
     {
       k: ['precio','cuánto','cuanto','coste','cuesta','presupuesto','tarifa','vale'],
-      r: '¡Hola! Tenemos 3 planes:\n\n💻 Digital — 990€ + IVA\nWeb profesional, hasta 8 secciones, SEO y formulario.\n\n⭐ Premium — 1.990€ + IVA\nTodo lo anterior + estrategia, redes sociales y soporte post-lanzamiento.\n\n🚀 A medida — Precio personalizado\nE-commerce, reservas, multiidioma, CRM…\n\n¿Te cuento más sobre algún plan?'
+      r: 'Tenemos tres opciones de precio.\n\nEl plan Digital cuesta 990 euros más IVA. Incluye web profesional de hasta 8 secciones, diseño a medida, adaptada a móvil y optimizada para Google.\n\nEl plan Premium cuesta 1.990 euros más IVA y es el que más eligen nuestros clientes. Incluye todo lo anterior, más estrategia de contenidos, integración con redes sociales y soporte post-lanzamiento.\n\nPara proyectos más complejos como tiendas online, reservas o integraciones especiales, hacemos un presupuesto personalizado.\n\n¿Algún plan encaja con lo que necesitas?'
     },
     {
       k: ['web','página','pagina','website','corporativa','landing'],
-      r: 'Diseñamos webs 100% a medida, sin plantillas genéricas.\n\n✅ Diseño personalizado\n✅ Adaptada a móvil y tablet\n✅ Optimizada para Google\n✅ Carga ultrarrápida\n\n¿Ya tienes en mente el tipo de web que necesitas?'
+      r: 'Diseñamos webs completamente a medida, sin plantillas genéricas. Cada proyecto empieza desde cero pensando en tu negocio, tu público y tus objetivos.\n\nTodas nuestras webs son rápidas, se ven bien en móvil y están optimizadas para aparecer en Google desde el primer día.\n\n¿Tienes ya alguna idea de lo que buscas?'
     },
     {
-      k: ['seo','google','posicionamiento','aparecer','búsqueda','busqueda'],
-      r: 'El SEO es fundamental para que te encuentren en Google.\n\nTrabajamos:\n🔍 SEO técnico (velocidad, estructura)\n📝 Estrategia de contenidos\n📍 Google Business Profile\n\nTodos los planes incluyen SEO básico. El Premium incluye estrategia completa.'
+      k: ['seo','google','posicionamiento','aparecer','búsqueda','busqueda','buscador'],
+      r: 'Trabajamos el SEO desde el principio del proyecto, no como un añadido final. Eso incluye la estructura técnica de la web, la velocidad de carga, los contenidos y la ficha de Google Business.\n\nEl plan Digital incluye SEO básico. El Premium incluye estrategia de contenidos completa.\n\n¿Tu web ya existe o la estamos construyendo desde cero?'
     },
     {
-      k: ['tienda','ecommerce','e-commerce','vender','venta','shop','productos'],
-      r: '¡Montamos tiendas online completas! 🛍️\n\n✅ Catálogo de productos\n✅ Pasarela de pago (Stripe / PayPal / Redsys)\n✅ Gestión de pedidos y stock\n✅ Panel de administración sencillo\n\nEl precio depende del catálogo. ¿Me cuentas más?'
+      k: ['tienda','ecommerce','e-commerce','vender','venta','shop','productos','online'],
+      r: 'Montamos tiendas online completas con catálogo de productos, pasarela de pago (Stripe, PayPal o Redsys) y gestión de pedidos. Todo desde un panel de administración sencillo que tú puedes manejar sin conocimientos técnicos.\n\nEl precio depende del volumen del catálogo y las funcionalidades. ¿Me cuentas un poco más sobre tu proyecto?'
     },
     {
-      k: ['chatbot','bot','ia','inteligencia','automatización','automatizar','automatizacion','whatsapp business'],
-      r: 'Implementamos chatbots inteligentes y automatizaciones 🤖\n\n• Chatbot en tu web (como este)\n• WhatsApp Business automatizado\n• Email marketing automático\n• CRM integrado\n• Respuestas 24/7\n\n¿Para qué tipo de negocio lo necesitas?'
+      k: ['chatbot','bot','ia','inteligencia','automatización','automatizar','automatizacion','whatsapp business','whatsapp'],
+      r: 'Diseñamos e implementamos chatbots y automatizaciones que trabajan por tu negocio las 24 horas. Desde un asistente en la web como este, hasta flujos automáticos en WhatsApp Business o integraciones con tu CRM.\n\nEs algo que cada vez más negocios utilizan para responder consultas, cualificar leads y ahorrar tiempo. ¿Tienes algún proceso concreto en mente que te gustaría automatizar?'
     },
     {
-      k: ['tiempo','plazo','cuándo','cuando','semana','entrega','tardar','rápido','rapido'],
-      r: '⏱️ Plazos habituales:\n\n• Web Digital: 2-3 semanas\n• Web Premium: 3-5 semanas\n• Proyectos a medida: según alcance\n\nEmpezamos con una reunión inicial y te damos un calendario detallado. ¿Tienes alguna fecha límite?'
+      k: ['tiempo','plazo','cuándo','cuando','semana','entrega','tardar','rápido','rapido','urgente'],
+      r: 'Los plazos habituales son dos o tres semanas para el plan Digital, tres o cinco semanas para el Premium, y según alcance para proyectos a medida.\n\nSiempre empezamos con una reunión inicial donde te damos un calendario detallado. Si tienes una fecha límite, cuéntanosla y vemos cómo organizarnos.'
     },
     {
-      k: ['proceso','cómo','como','funciona','pasos','paso','trabaja'],
-      r: 'Nuestro proceso en 4 pasos:\n\n1️⃣ Nos conocemos — Llamada gratuita de 15 min\n2️⃣ Diseñamos — Propuesta visual a medida\n3️⃣ Desarrollamos — Código limpio y rápido\n4️⃣ Lanzamos — Publicamos y configuramos todo\n\n¿Empezamos con esa llamada?'
+      k: ['proceso','cómo','como','funciona','pasos','paso','trabaja','trabajáis','trabajais'],
+      r: 'El proceso tiene cuatro fases. Primero nos conocemos en una llamada de 15 minutos sin compromiso. Después diseñamos una propuesta visual a medida que tú validas. Luego construimos la web con código limpio y optimizado. Y por último la publicamos, configuramos todo y te acompañamos las primeras semanas.\n\nEn todo momento sabes en qué punto estamos. ¿Te gustaría empezar con esa llamada?'
     },
     {
-      k: ['contacto','hablar','llamar','email','correo','reunión','reunion','videollamada','llamada'],
-      r: 'Puedes contactarnos así:\n\n📧 hola@bonline.es\n📱 WhatsApp (botón abajo)\n📅 Videollamada gratuita de 15 min\n\n¡Respondemos en menos de 24 horas! 🙌'
+      k: ['contacto','hablar','llamar','email','correo','reunión','reunion','videollamada','llamada','escribir'],
+      r: 'Puedes escribirnos a hola@bonline.es o por WhatsApp. También puedes reservar una videollamada gratuita de 15 minutos si prefieres hablarlo en persona.\n\nRespondemos en menos de 24 horas.'
     },
     {
-      k: ['quién','quien','equipo','somos','empresa','agencia','sois'],
-      r: 'Somos b online, agencia digital en Madrid y Barcelona 🌐\n\nNuestro equipo:\n👤 Sergio — Estrategia\n👤 Raquel — Marketing\n👤 Jose — Desarrollo\n👤 Laura — Contenidos\n👤 Rosa — IA & automatización\n👤 María — UX/UI\n\nTrabajamos sin intermediarios, directamente contigo.'
+      k: ['quién','quien','equipo','somos','empresa','agencia','sois','trabajáis','trabajais'],
+      r: 'Somos b online, una agencia digital con sede en Madrid y Barcelona. Trabajamos de forma directa, sin intermediarios, lo que significa que la persona con quien hablas es la que trabaja en tu proyecto.\n\nEl equipo lo forman Sergio en estrategia, Raquel en marketing, Jose en desarrollo, Laura en contenidos, Rosa en IA y automatización, y María en diseño UX y UI.'
     },
     {
-      k: ['pago','factura','financiación','financiacion','plazos','forma de pago'],
-      r: 'Trabajamos con precio cerrado desde el inicio 💳\n\nForma de pago:\n• 50% al comenzar el proyecto\n• 50% en la entrega\n\nFactura con IVA. Sin sorpresas.'
+      k: ['pago','factura','financiación','financiacion','plazos','forma de pago','cobráis','cobrar'],
+      r: 'El precio es cerrado desde el primer día, sin sorpresas ni letra pequeña. Se paga en dos partes: el 50% al inicio del proyecto y el 50% en la entrega. Emitimos factura con IVA incluido.'
     },
     {
-      k: ['hola','buenas','hey','buenos días','buenos dias','buenas tardes','buenas noches'],
-      r: '¡Hola! 👋 Soy el asistente de b online.\n\nPuedo ayudarte con precios, servicios, proceso de trabajo o cualquier duda sobre tu proyecto digital. ¿Por dónde empezamos?'
+      k: ['hola','buenas','hey','buenos días','buenos dias','buenas tardes','buenas noches','ey'],
+      r: 'Hola, soy el asistente de b online. Puedo ayudarte con información sobre precios, servicios, plazos o el proceso de trabajo. ¿En qué te puedo orientar?'
     },
     {
-      k: ['gracias','genial','perfecto','ok','vale','bien'],
-      r: 'De nada 😊 Estamos aquí para lo que necesites. Si quieres hablar con el equipo directamente, escríbenos a hola@bonline.es o por WhatsApp.'
+      k: ['gracias','genial','perfecto','ok','vale','bien','entendido'],
+      r: 'De nada. Si en algún momento quieres hablar directamente con el equipo, escríbenos a hola@bonline.es o por WhatsApp. Estamos disponibles de lunes a viernes.'
     },
   ];
 
